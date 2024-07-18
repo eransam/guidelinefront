@@ -1,0 +1,10 @@
+<div class="worker-details">
+    <div>Name: {{ selectedWorker?.name }}</div>
+    <div>Last Name: {{ selectedWorker?.lastName }}</div>
+    <div>Phone Number: {{ selectedWorker?.phoneNumber }}</div>
+    <div>Address: {{ selectedWorker?.address }}</div>
+    <div>Gender: {{ selectedWorker?.gender }}</div>
+    <div>Department: {{ getDepartmentName(selectedWorker?.department) }}</div>
+    <div>Worker Type: {{ getWorkerTypeName(selectedWorker?.workerType) }}</div>
+  </div>
+  
