@@ -6,10 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./worker-details-panel.component.scss']
 })
 export class WorkerDetailsPanelComponent {
-  @Input() selectedWorker: any;
+  @Input() selectedWorker: any; // Ensure selectedWorker input is defined
 
   getDepartmentName(department: number): string {
-    // Implement logic to map department number to department name
     switch (department) {
       case 0: return 'General';
       case 1: return 'Accounting';
@@ -21,7 +20,6 @@ export class WorkerDetailsPanelComponent {
   }
 
   getWorkerTypeName(workerType: number): string {
-    // Implement logic to map worker type number to worker type name
     switch (workerType) {
       case 0: return 'General Manager';
       case 1: return 'Department Manager';

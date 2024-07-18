@@ -1,6 +1,20 @@
-<div *ngFor="let worker of workers">
-    <button (click)="showDetails(worker)">
-      {{ worker.name }} {{ worker.lastName }}
-    </button>
+<div>
+    <div *ngFor="let worker of workers">
+      <button (click)="showDetails(worker)">
+        {{ worker.name }} {{ worker.lastName }}
+      </button>
+    </div>
+  
+    <div *ngIf="selectedWorker">
+      <h2>Selected Worker Details</h2>
+      <div>
+        <p><strong>Name:</strong> {{ selectedWorker.name }} {{ selectedWorker.lastName }}</p>
+        <p><strong>Phone Number:</strong> {{ selectedWorker.phoneNumber }}</p>
+        <p><strong>Address:</strong> {{ selectedWorker.address }}</p>
+        <p><strong>Gender:</strong> {{ selectedWorker.gender }}</p>
+        <p><strong>Department:</strong> {{ getDepartmentName(selectedWorker.department) }}</p>
+        <p><strong>Worker Type:</strong> {{ getWorkerTypeName(selectedWorker.workerType) }}</p>
+      </div>
+    </div>
   </div>
   
